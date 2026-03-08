@@ -1,0 +1,16 @@
+John Doe
+Email: john.doe@example.com
+Phone: 1234567890
+
+Summary: Experienced Software Engineer with 5 years of experience in Python, Javascript, and AWS.
+
+Skills: Python, Javascript, AWS, SQL, Docker, React, HTML, CSS.
+
+Experience:
+Senior Software Engineer at Tech Corp (2020-Present)
+- Developed scalable microservices using Python and Docker.
+- Led the frontend team in transitioning to React.
+- Managed cloud infrastructure on AWS.
+
+Education:
+Bachelor of Science in Computer Science, University of Technology (2016-2020)
