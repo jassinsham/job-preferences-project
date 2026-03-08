@@ -33,5 +33,5 @@ EXPOSE 8000
 ENV PYTHONUNBUFFERED=1
 ENV PORT=8000
 
-# Run the application
-CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "main:app", "--bind", "0.0.0.0:8000"]
+# Run the application using the dynamic PORT environment variable provided by Render
+CMD ["sh", "-c", "gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:$PORT"]

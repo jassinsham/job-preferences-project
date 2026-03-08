@@ -10,10 +10,11 @@ def init_db_data(db: Session):
     if db.query(Job).first():
         return
         
-    # Find all CSV files in the project root (one level up from backend)
-    # The script runs from the backend directory
-    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-    csv_files = glob.glob(os.path.join(project_root, "*.csv"))
+    # Find all CSV files in the backend/data directory
+    # The script runs from the backend directory, and this file is in backend/utils/
+    backend_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    data_dir = os.path.join(backend_root, "data")
+    csv_files = glob.glob(os.path.join(data_dir, "*.csv"))
     
     if csv_files:
         for csv_path in csv_files:
