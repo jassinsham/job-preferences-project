@@ -277,14 +277,16 @@
                             <span class="badge have">{{ have | capitalize }}</span>
                             {% endfor %}
 
-                            {% if current_filters.internships == 'True' or internships %}
+                            <!-- User Requested: Include internships and certifications in this section -->
+                            {% if internships %}
                             <span class="badge have"
-                                style="background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd;">Internships</span>
+                                style="background: rgba(14, 165, 233, 0.1); color: var(--accent); border: 1px solid rgba(14, 165, 233, 0.2);">Internship
+                                Experience</span>
                             {% endif %}
 
-                            {% if current_filters.certificates == 'True' or certificates %}
+                            {% if certificates %}
                             <span class="badge have"
-                                style="background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd;">Certificates</span>
+                                style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.2);">Certified</span>
                             {% endif %}
 
                             {% if not match.matched_skills and not internships and not certificates %}
